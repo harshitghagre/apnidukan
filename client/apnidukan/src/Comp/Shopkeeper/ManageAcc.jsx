@@ -7,7 +7,7 @@ export default function ManageAcc() {
 
   const fetchCustomerData = async () => {
     try {
-      const res = await axios.get("http://localhost:5500/getcus");
+      const res = await axios.get("https://apnidukan-ngx3.onrender.com/getcus");
       return res.data.customer;
     } catch (err) {
       console.log("Error fetching customer data");
@@ -26,7 +26,7 @@ export default function ManageAcc() {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5500/deletcus/${id}`)
+      .delete(`https://apnidukan-ngx3.onrender.com/deletcus/${id}`)
       .then((res) => {
         alert(res.data.message);
         setData((prevData) => prevData.filter((post) => post._id !== id));
