@@ -39,7 +39,7 @@ export default function NavDash() {
     const [shop, setShop] = useState([])
     const d = async () => {
         try {
-            const res = await axios.get("http://localhost:5500/")
+            const res = await axios.get("https://apnidukan-ngx3.onrender.com/")
             return res.data.Shopkeepers
         } catch (err) {
             console.log("error")
